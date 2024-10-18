@@ -1,0 +1,75 @@
+﻿<Window x:Class="CassaSystem.Market"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CassaSystem"
+        mc:Ignorable="d"
+        Title="Market" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Qalin yaşıl xəttlər -->
+        <Border BorderBrush="Green" BorderThickness="5" Margin="0,0,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Yuxarıda "Market" yazısı -->
+                <TextBlock Text="Market" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,10" Foreground="Green"/>
+
+                <!-- Aşağıdakı düymələr -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+                    <Button Name="SatisButton" Click="Satis_Click" Content="Satis" Width="200" Height="100" FontSize="24" Background="LightGray">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="LightGray"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderBrush" Value="Green"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Margin" Value="5"/>
+                                <Setter Property="Padding" Value="10"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="LightGreen"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button Name="InfoButton" Click ="Info_Click" Content="Info" Width="200" Height="100" FontSize="24" Background="LightGray">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="LightGray"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderBrush" Value="Green"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Margin" Value="5"/>
+                                <Setter Property="Padding" Value="10"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="LightGreen"/>
+                                        <Setter Property="Foreground" Value="White"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Pəncərənin alt hissəsi üçün xət -->
+        <Border BorderBrush="Green" BorderThickness="5" Margin="0,0,0,0" Grid.Row="1"/>
+        <Border BorderBrush="Green" BorderThickness="5" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="5"/>
+        <Border BorderBrush="Green" BorderThickness="5" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="5"/>
+    </Grid>
+</Window>
